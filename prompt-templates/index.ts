@@ -12,4 +12,12 @@ Generate a promotional tweet for a product, from this product description:
 
 const tweetPrompt = PromptTemplate.fromTemplate(tweetTemplate);
 
-console.log(tweetPrompt);
+const tweetChain = tweetPrompt.pipe(llm);
+
+const response = await tweetChain.invoke(
+  {
+    productDesc: 'Electric shoes'
+  }
+);
+
+console.log(response.content);
