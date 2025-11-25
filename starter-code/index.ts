@@ -2,6 +2,7 @@ import { PromptTemplate } from "@langchain/core/prompts";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { createClient } from "@supabase/supabase-js";
 import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
+import { StringOutputParser } from "@langchain/core/output_parsers";
 
 // document.addEventListener("submit", (e) => {
 //   e.preventDefault();
@@ -47,16 +48,15 @@ question: {question} standalone question:
 const standaloneQuestionPrompt = PromptTemplate.fromTemplate(standaloneQuestionTemplate);
 
 // Take the standaloneQuestionPrompt and PIPE the model
-const standaloneQuestionChain = standaloneQuestionPrompt.pipe(llm);
+const chain = standaloneQuestionPrompt.pipe(llm)
+                                                        .pipe(new StringOutputParser())
+                                                        .pipe(retriever);
 
-const response = await standaloneQuestionChain.invoke({
+const response = await chain.invoke({
   question: "What is Jaeyoung's strength in technical skills?",
 });
 
-const response2 = await retriever.invoke("What is Jaeyoung's strength in technical skills?");
-
 console.log(response);
-console.log(response2);
 
 async function progressConversation() {
   const userInput = document.getElementById("user-input") as HTMLInputElement | null;
