@@ -122,3 +122,8 @@ button {
     text-transform: uppercase;
     margin: 0;
 }
+
+.submit-btn {
+    color: #fefefe;
+    cursor: pointer;
+}

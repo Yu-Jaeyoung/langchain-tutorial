@@ -5,10 +5,10 @@ import { retriever } from "./utils/retriever.ts";
 import { combineDocuments } from "./utils/combine-documents.ts";
 import { RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables";
 
-// document.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   progressConversation();
-// });
+document.addEventListener("submit", (e) => {
+  e.preventDefault();
+  progressConversation();
+});
 
 const openAIApiKey = process.env.OPENAI_API_KEY;
 const llm = new ChatOpenAI({
@@ -65,12 +65,6 @@ const chain = RunnableSequence.from([
   answerChain,
 ]);
 
-const response = await chain.invoke({
-  question: "What is Jaeyoung's strength in technical skills?",
-});
-
-console.log(response);
-
 async function progressConversation() {
   const userInput = document.getElementById("user-input") as HTMLInputElement | null;
   if (!userInput) return;
@@ -86,26 +80,14 @@ async function progressConversation() {
   newHumanSpeechBubble.textContent = question;
   chatbotConversation.scrollTop = chatbotConversation.scrollHeight;
 
-  // OpenAI API Call
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${openAIApiKey}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o-mini",
-      messages: [ { role: "user", content: question } ],
-    }),
+  const response = await chain.invoke({
+    question: question,
   });
-
-  const data = await response.json();
-  const result = data.choices[0].message.content;
 
   // add AI Message
   const newAiSpeechBubble = document.createElement("div");
   newAiSpeechBubble.classList.add("speech", "speech-ai");
   chatbotConversation.appendChild(newAiSpeechBubble);
-  newAiSpeechBubble.textContent = result;
+  newAiSpeechBubble.textContent = response;
   chatbotConversation.scrollTop = chatbotConversation.scrollHeight;
 }
