@@ -1,103 +1,88 @@
 # User Profile & Preferences Summary
 # Generated: November 25, 2025 by Gemini
-
 1. Development Environment
---------------------------------------------------
-- **Operating System:** MacOS (Currently using Mac Mini and Macbook Air).
-- **IDEs:**
+- Operating System: MacOS (Currently using Mac Mini and Macbook Air).
+- IDEs:
   - JavaScript/TypeScript: WebStorm
   - Java: IntelliJ IDEA Ultimate
-
+-- 
 2. Technical Stack & Interests
---------------------------------------------------
-- **Primary Language:** TypeScript
+- Primary Language: TypeScript
   - Focus: Strong typing and adhering to official documentation.
   - Constraints: STRICTLY NO use of `any` type and NO type assertions.
-- **Learning:** Python
+- Learning: Python
   - Goal: To become a skilled developer for AI applications and Data Science.
   - Current Focus: Environment setup, basic syntax, and AI integration.
-- **Database:** PostgreSQL & SQL
+- Database: PostgreSQL & SQL
   - Interests: DML, Schema design, Foreign Keys, `EXPLAIN ANALYZE`, and statistical functions (`ROLLUP`, `CUBE`).
-- **AI & Data Science:**
+- AI & Data Science:
   - Topics: LLM architecture, Prompt Engineering, Cosine Similarity, Image Generation.
-- **Other Interests:**
+- Other Interests:
   - Java (General usage).
   - Art & Branding: Intersection of Impressionism with modern branding elements (facade, color, form).
-
+-- 
 3. Active Projects
---------------------------------------------------
-- **LLM from Scratch:**
+- LLM from Scratch:
   - Description: Building a Large Language Model following the "Build a Large Language Model (From Scratch)" book.
   - Repository: `llm-from-scratch`.
-- **Personalized Food Recommendation Agent:**
+- Personalized Food Recommendation Agent:
   - Description: Designing an AI agent for personalized food and restaurant recommendations.
-- **Python Learning Journey:**
+- Python Learning Journey:
   - Description: Structured curriculum starting from environment setup (`pyenv`, `venv`).
-
+-- 
 4. Interaction Guidelines (AI Instructions)
---------------------------------------------------
-- **Code Handling:**
+- Code Handling:
   - ALWAYS analyze the code before processing or modifying it.
   - Default to `TypeScript` unless specified otherwise.
-- **Response Style:**
+- Response Style:
   - Concise and core-focused.
   - Always provide evidence/reasoning for answers.
   - Self-Evaluation: Always evaluate the generated answer; provide supplementary details if correct, or correct it if wrong.
   - Inquiry: When asked about specific knowledge, ask for the user's reasoning ("Why do you think that?").
-- **Git Commit Messages:**
+- Git Commit Messages:
   - Language: English.
   - Format:
     1. Title (Summary of core change).
     2. Blank line.
     3. Body (Bullet points starting with hyphens `-`).
-
----------
-
+-- 
 Profile Summary - Jaeyoung By Claude
-==========================
 
 Basic Information
-----------------
 - Location: Daejeon, South Korea
 - Role: Backend Developer & Java Programming Instructor
-
+-- 
 Technical Expertise
--------------------
 - Primary Stack: TypeScript, NestJS, PostgreSQL, Bun Test, Cloudflare
 - Databases: PostgreSQL, MySQL migration experience
 - Auth/Security: JWT authentication, claim-based authorization
 - Containers: Docker
 - Teaching: Java programming (OOP concepts)
-
+-- 
 Current Activities
------------------
 1. Academic Research
    - Topic: How prompt engineering affects Impressionist style reproduction in text-to-image models
    - FineQuery Project: Writing paper on transitioning from layered to hexagonal architecture
-
 2. Learning
    - SICP (Structure and Interpretation of Computer Programs) - JavaScript Edition
    - Managing study progress via GitHub repository
    - Studying fundamental concepts: evaluation models, JIT compilation
-
+-- 
 Major Project Experience
-------------------------
 - Multi-tenant kiosk service platform (SaaS transition, AI integration planned)
 - MySQL → PostgreSQL migration (Sakila database)
 - Research connecting Impressionist art principles to modern branding strategies
 - Academic research using Vision-Language Models (SigLIP2, DINOv2)
-
+-- 
 Areas of Interest
------------------
 - Computer science fundamentals
 - Functional programming
 - Advanced TypeScript features (distributive conditional types, indexed access types, generics)
 - Design patterns (Abstract Factory, Factory Method, Decorator)
 - Software architecture patterns
 - Higher-order functions, type system mechanics
-
+-- 
 Learning Approach
------------------
 - Deep technical exploration
 - Understanding underlying principles through "why" questions
 - Practical implementation with systematic documentation

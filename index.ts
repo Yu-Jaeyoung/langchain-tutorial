@@ -6,7 +6,7 @@ try {
 
   const splitter = new RecursiveCharacterTextSplitter({
     chunkSize: 500,
-    separators: [ "\n\n", "\n", " ", "" ], // default setting,
+    separators: [ "\n\n", "\n", " ", "","-- " ],
     chunkOverlap: 50,
   });
 
