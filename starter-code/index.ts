@@ -3,6 +3,7 @@ import { ChatOpenAI } from "@langchain/openai";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { retriever } from "./utils/retriever.ts";
 import { combineDocuments } from "./utils/combine-documents.ts";
+import { RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables";
 
 // document.addEventListener("submit", (e) => {
 //   e.preventDefault();
@@ -15,13 +16,23 @@ const llm = new ChatOpenAI({
   openAIApiKey,
 });
 
-// A string holding the phrasing of the prompt
 const standaloneQuestionTemplate = `Given a question, convert it to a standalone question.
 question: {question} standalone question:
 `;
 
-// A prompt created using PromptTemplate and the fromTemplate method
 const standaloneQuestionPrompt = PromptTemplate.fromTemplate(standaloneQuestionTemplate);
+
+const standaloneQuestionChain = RunnableSequence.from([
+  standaloneQuestionPrompt,
+  llm,
+  new StringOutputParser(),
+]);
+
+const retrieverChain = RunnableSequence.from([
+  prevResult => prevResult.standalone_question,
+  retriever,
+  combineDocuments,
+]);
 
 const answerTemplate = `
   You are a helpful and enthusiastic support bot who can answer a given
@@ -36,11 +47,23 @@ const answerTemplate = `
 
 const answerPrompt = PromptTemplate.fromTemplate(answerTemplate);
 
-const chain = standaloneQuestionPrompt.pipe(llm)
-                                      .pipe(new StringOutputParser())
-                                      .pipe(retriever)
-                                      .pipe(combineDocuments)
-                                      .pipe(answerPrompt);
+const answerChain = RunnableSequence.from([
+  answerPrompt,
+  llm,
+  new StringOutputParser(),
+]);
+
+const chain = RunnableSequence.from([
+  {
+    standalone_question: standaloneQuestionChain,
+    original_input: new RunnablePassthrough(),
+  },
+  {
+    context: retrieverChain,
+    question: ({ original_input }) => original_input.question,
+  },
+  answerChain,
+]);
 
 const response = await chain.invoke({
   question: "What is Jaeyoung's strength in technical skills?",
