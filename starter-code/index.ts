@@ -1,8 +1,8 @@
 import { PromptTemplate } from "@langchain/core/prompts";
-import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
-import { createClient } from "@supabase/supabase-js";
-import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
+import { ChatOpenAI } from "@langchain/openai";
 import { StringOutputParser } from "@langchain/core/output_parsers";
+import { retriever } from "./utils/retriever.ts";
+import { combineDocuments } from "./utils/combine-documents.ts";
 
 // document.addEventListener("submit", (e) => {
 //   e.preventDefault();
@@ -10,47 +10,37 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 // });
 
 const openAIApiKey = process.env.OPENAI_API_KEY;
-
-const embeddings = new OpenAIEmbeddings({ openAIApiKey });
-const sbApiKey = process.env.SUPABASE_API_KEY || "undefined";
-const sbUrl = process.env.SUPABASE_PROJECT_LC_TUTOR_URL || "undefined";
-const client = createClient(sbUrl, sbApiKey);
-
-const vectorStore = new SupabaseVectorStore(embeddings, {
-  client,
-  tableName: "documents",
-  queryName: "match_documents",
-});
-
-const retriever = vectorStore.asRetriever();
-
 const llm = new ChatOpenAI({
   model: "gpt-4o-mini",
   openAIApiKey,
 });
 
-/**
- * Challenge:
- * 1. Create a prompt to turn a user's question into a
- *    standalone question. (Hint: the AI understands
- *    the concept of a standalone question. You don't
- *    need to explain it, just ask for it.)
- * 2. Create a chain with the prompt and the model.
- * 3. Invoke the chain remembering to pass in a question.
- * 4. Log out the response.
- * **/
-
 // A string holding the phrasing of the prompt
 const standaloneQuestionTemplate = `Given a question, convert it to a standalone question.
 question: {question} standalone question:
 `;
+
 // A prompt created using PromptTemplate and the fromTemplate method
 const standaloneQuestionPrompt = PromptTemplate.fromTemplate(standaloneQuestionTemplate);
 
-// Take the standaloneQuestionPrompt and PIPE the model
+const answerTemplate = `
+  You are a helpful and enthusiastic support bot who can answer a given
+  question about person, name "Jaeyoung" based on the context provided. Try to find the answer
+  in the context. If you really don't know the answer, say "I'm sorry, I don't know the answer to that."
+  And direct the questioner to email jaeyoung@wisoft.io. Don't try to make up an answer.
+  Always speak as if you were chatting to a superior officer.
+  context: {context}
+  question: {question}
+  answer:
+`;
+
+const answerPrompt = PromptTemplate.fromTemplate(answerTemplate);
+
 const chain = standaloneQuestionPrompt.pipe(llm)
-                                                        .pipe(new StringOutputParser())
-                                                        .pipe(retriever);
+                                      .pipe(new StringOutputParser())
+                                      .pipe(retriever)
+                                      .pipe(combineDocuments)
+                                      .pipe(answerPrompt);
 
 const response = await chain.invoke({
   question: "What is Jaeyoung's strength in technical skills?",
