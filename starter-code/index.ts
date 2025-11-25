@@ -1,5 +1,7 @@
 import { PromptTemplate } from "@langchain/core/prompts";
-import { ChatOpenAI } from "@langchain/openai";
+import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
+import { createClient } from "@supabase/supabase-js";
+import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
 
 // document.addEventListener("submit", (e) => {
 //   e.preventDefault();
@@ -7,6 +9,20 @@ import { ChatOpenAI } from "@langchain/openai";
 // });
 
 const openAIApiKey = process.env.OPENAI_API_KEY;
+
+const embeddings = new OpenAIEmbeddings({ openAIApiKey });
+const sbApiKey = process.env.SUPABASE_API_KEY || "undefined";
+const sbUrl = process.env.SUPABASE_PROJECT_LC_TUTOR_URL || "undefined";
+const client = createClient(sbUrl, sbApiKey);
+
+const vectorStore = new SupabaseVectorStore(embeddings, {
+  client,
+  tableName: "documents",
+  queryName: "match_documents",
+});
+
+const retriever = vectorStore.asRetriever();
+
 const llm = new ChatOpenAI({
   model: "gpt-4o-mini",
   openAIApiKey,
@@ -34,10 +50,13 @@ const standaloneQuestionPrompt = PromptTemplate.fromTemplate(standaloneQuestionT
 const standaloneQuestionChain = standaloneQuestionPrompt.pipe(llm);
 
 const response = await standaloneQuestionChain.invoke({
-  question: 'What is Jaeyoung\'s strength in technical skills?'
-})
+  question: "What is Jaeyoung's strength in technical skills?",
+});
+
+const response2 = await retriever.invoke("What is Jaeyoung's strength in technical skills?");
 
 console.log(response);
+console.log(response2);
 
 async function progressConversation() {
   const userInput = document.getElementById("user-input") as HTMLInputElement | null;
