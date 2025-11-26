@@ -15,6 +15,7 @@ const vectorStore = new SupabaseVectorStore(embeddings, {
   queryName: "match_documents",
 });
 
-const retriever = vectorStore.asRetriever();
+// default chunk count = 4
+const retriever = vectorStore.asRetriever(6);
 
 export { retriever };
