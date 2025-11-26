@@ -1,4 +1,7 @@
 import { chain } from "./chain.ts";
+import { formatConvHistory } from "./utils/format-conv-history.ts";
+
+const convHistory: any[] = [];
 
 const server = Bun.serve({
   port: 3000,
@@ -18,19 +21,28 @@ const server = Bun.serve({
       try {
         const { question } = await req.json();
         console.log("받은 질문:", question);
+        convHistory.push(question);
 
-        const response = await chain.invoke({ question });
+        const response = await chain.invoke({
+          question,
+          conv_history: formatConvHistory(convHistory),
+        });
+
+        console.log("test: ", formatConvHistory(convHistory));
         console.log("생성된 응답:", response);
+        convHistory.push(response);
 
         return new Response(
-          JSON.stringify({ answer: response }),
-          { headers }
+          JSON.stringify({
+            answer: response,
+          }),
+          { headers },
         );
       } catch (error) {
         console.error("에러 발생:", error);
         return new Response(
           JSON.stringify({ error: "Internal Server Error" }),
-          { status: 500, headers }
+          { status: 500, headers },
         );
       }
     }

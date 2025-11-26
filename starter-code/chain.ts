@@ -4,6 +4,7 @@ import { RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { retriever } from "./utils/retriever.ts";
 import { combineDocuments } from "./utils/combine-documents.ts";
+import { formatConvHistory } from "./utils/format-conv-history.ts";
 
 const openAIApiKey = process.env.OPENAI_API_KEY;
 const llm = new ChatOpenAI({
@@ -11,9 +12,13 @@ const llm = new ChatOpenAI({
   openAIApiKey,
 });
 
-const standaloneQuestionTemplate = `Given a question, convert it to a standalone question.
-question: {question} standalone question:
-`;
+const standaloneQuestionTemplate =
+  `Given some conversation history (if any) and a question,
+  convert the question to a standalone question.
+  conversation history: {conv_history}
+  question: {question} 
+  standalone question:
+  `;
 
 const standaloneQuestionPrompt = PromptTemplate.fromTemplate(standaloneQuestionTemplate);
 
@@ -30,12 +35,15 @@ const retrieverChain = RunnableSequence.from([
 ]);
 
 const answerTemplate = `
-  You are a helpful and enthusiastic support bot who can answer a given
-  question about person, name "Jaeyoung" based on the context provided. Try to find the answer
-  in the context. If you really don't know the answer, say "I'm sorry, I don't know the answer to that."
+  You are a helpful and enthusiastic support bot who can answer 
+  a given question based on the context provided and the conversation history. 
+  Try to find the answer in the context.
+  If the answer is not given in the context, find the answer in the conversation history if possible. 
+  If you really don't know the answer, say "I'm sorry, I don't know the answer to that."
   And direct the questioner to email jaeyoung@wisoft.io. Don't try to make up an answer.
   Always speak as if you were chatting to a superior officer.
   context: {context}
+  conversation history: {conv_history}
   question: {question}
   answer:
 `;
@@ -56,6 +64,7 @@ const chain = RunnableSequence.from([
   {
     context: retrieverChain,
     question: ({ original_input }) => original_input.question,
+    conv_history: ({ original_input }) => original_input.conv_history,
   },
   answerChain,
 ]);
