@@ -1,0 +1,25 @@
+services:
+  unsloth:
+    image: unsloth/unsloth:latest
+    container_name: unsloth_studio
+
+    restart: unless-stopped
+
+    ports:
+      - "10020:8888"   # Jupyter Lab / Unsloth Studio
+      - "10030:8000"   # API / Inference
+
+    volumes:
+      - ./unsloth/workspace:/workspace
+      - ./unsloth/hf_cache:/root/.cache/huggingface
+
+    environment:
+      TZ: Asia/Seoul
+      JUPYTER_PASSWORD: thisispassword
+      CUDA_VISIBLE_DEVICES: "0"
+
+    ipc: host
+    tty: true
+    stdin_open: true
+
+    gpus: all
