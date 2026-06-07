@@ -16,7 +16,7 @@ services:
     environment:
       TZ: Asia/Seoul
       JUPYTER_PASSWORD: thisispassword
-      CUDA_VISIBLE_DEVICES: "0"
+      CUDA_VISIBLE_DEVICES: "0,1"
 
     ipc: host
     tty: true
