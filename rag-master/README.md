@@ -1,0 +1,29 @@
+# rag-master 학습 기록
+
+`rag-master` 책을 학습하며 작성한 코드와 실습 노트북을 정리한 폴더입니다.
+
+## 구조
+
+```text
+rag-master/
+├── docker-compose.yml
+├── README.md
+└── chapter01-langchain-overview/
+    ├── 00-gpu-cuda-check.ipynb
+    ├── 01-openai-compatible-local-llm-call.ipynb
+    ├── 02-langchain-prompt-model-parser-chain.ipynb
+    ├── 03-langchain-batch-and-stream.ipynb
+    ├── 04-langchain-sequential-composed-chain.ipynb
+    └── 05-langchain-parallel-runnableparallel.ipynb
+```
+
+## 파일 설명
+
+- `docker-compose.yml`: Unsloth 기반 로컬 Jupyter/LLM 실행 환경 설정
+- `chapter01-langchain-overview/`: chapter01 랭체인 살펴보기
+- `chapter01-langchain-overview/00-gpu-cuda-check.ipynb`: NVIDIA GPU, CUDA, PyTorch 연산 확인
+- `chapter01-langchain-overview/01-openai-compatible-local-llm-call.ipynb`: OpenAI 호환 API로 로컬 LLM 직접 호출
+- `chapter01-langchain-overview/02-langchain-prompt-model-parser-chain.ipynb`: LangChain의 프롬프트, 모델, 출력 파서를 연결한 기본 체인
+- `chapter01-langchain-overview/03-langchain-batch-and-stream.ipynb`: LangChain 체인의 배치 실행과 스트리밍 출력
+- `chapter01-langchain-overview/04-langchain-sequential-composed-chain.ipynb`: 체인을 순차적으로 연결해 설명 생성 후 번역 수행
+- `chapter01-langchain-overview/05-langchain-parallel-runnableparallel.ipynb`: `RunnableParallel`을 사용한 한국어/영어 설명 병렬 생성
