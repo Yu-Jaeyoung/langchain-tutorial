@@ -19,7 +19,8 @@ rag-master/
     ├── 07-few-shot-prompt-and-semantic-selector.ipynb
     ├── 08-json-output-parser-and-retry.ipynb
     ├── 09-pydantic-output-parser-and-validation.ipynb
-    └── 10-simple-json-output-parser-streaming.ipynb
+    ├── 10-simple-json-output-parser-streaming.ipynb
+    └── 11-json-output-parser-pydantic-schema.ipynb
 ```
 
 ## 파일 설명
@@ -37,3 +38,4 @@ rag-master/
 - `chapter01-langchain-overview/08-json-output-parser-and-retry.ipynb`: JSON 출력 파서와 잘못된 출력 재시도 파서
 - `chapter01-langchain-overview/09-pydantic-output-parser-and-validation.ipynb`: `PydanticOutputParser`와 Pydantic 검증 로직을 사용한 구조화 출력
 - `chapter01-langchain-overview/10-simple-json-output-parser-streaming.ipynb`: `SimpleJsonOutputParser`를 사용한 JSON 응답 스트리밍 파싱
+- `chapter01-langchain-overview/11-json-output-parser-pydantic-schema.ipynb`: `JsonOutputParser`와 Pydantic 스키마를 사용한 구조화 JSON 출력
