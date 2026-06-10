@@ -23,7 +23,8 @@ rag-master/
     ├── 11-json-output-parser-pydantic-schema.ipynb
     ├── 12-chat-prompt-conversation-history.ipynb
     ├── 13-in-memory-chat-message-history.ipynb
-    └── 14-runnable-message-history-and-langgraph-memory.ipynb
+    ├── 14-runnable-message-history-and-langgraph-memory.ipynb
+    └── 15-message-trimming-and-summarization.ipynb
 ```
 
 ## 파일 설명
@@ -45,3 +46,4 @@ rag-master/
 - `chapter01-langchain-overview/12-chat-prompt-conversation-history.ipynb`: `ChatPromptTemplate`에 대화 이력을 전달해 이전 맥락 유지
 - `chapter01-langchain-overview/13-in-memory-chat-message-history.ipynb`: `InMemoryChatMessageHistory`를 사용한 대화 이력 저장과 전달
 - `chapter01-langchain-overview/14-runnable-message-history-and-langgraph-memory.ipynb`: `RunnableWithMessageHistory`와 LangGraph `InMemorySaver`를 사용한 자동 대화 이력 관리
+- `chapter01-langchain-overview/15-message-trimming-and-summarization.ipynb`: `trim_messages`와 요약 체인을 사용한 대화 이력 축약
