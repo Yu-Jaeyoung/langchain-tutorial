@@ -17,7 +17,9 @@ rag-master/
     ├── 05-langchain-parallel-runnableparallel.ipynb
     ├── 06-langchain-prompt-templates-and-placeholders.ipynb
     ├── 07-few-shot-prompt-and-semantic-selector.ipynb
-    └── 08-json-output-parser-and-retry.ipynb
+    ├── 08-json-output-parser-and-retry.ipynb
+    ├── 09-pydantic-output-parser-and-validation.ipynb
+    └── 10-simple-json-output-parser-streaming.ipynb
 ```
 
 ## 파일 설명
@@ -33,3 +35,5 @@ rag-master/
 - `chapter01-langchain-overview/06-langchain-prompt-templates-and-placeholders.ipynb`: `PromptTemplate`, `ChatPromptTemplate`, `MessagesPlaceholder` 사용법
 - `chapter01-langchain-overview/07-few-shot-prompt-and-semantic-selector.ipynb`: 퓨샷 프롬프트와 임베딩 기반 유사도 예제 선택
 - `chapter01-langchain-overview/08-json-output-parser-and-retry.ipynb`: JSON 출력 파서와 잘못된 출력 재시도 파서
+- `chapter01-langchain-overview/09-pydantic-output-parser-and-validation.ipynb`: `PydanticOutputParser`와 Pydantic 검증 로직을 사용한 구조화 출력
+- `chapter01-langchain-overview/10-simple-json-output-parser-streaming.ipynb`: `SimpleJsonOutputParser`를 사용한 JSON 응답 스트리밍 파싱
