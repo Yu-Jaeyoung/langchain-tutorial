@@ -24,7 +24,8 @@ rag-master/
     ├── 12-chat-prompt-conversation-history.ipynb
     ├── 13-in-memory-chat-message-history.ipynb
     ├── 14-runnable-message-history-and-langgraph-memory.ipynb
-    └── 15-message-trimming-and-summarization.ipynb
+    ├── 15-message-trimming-and-summarization.ipynb
+    └── 16-langgraph-memory-trimming-and-summary.ipynb
 ```
 
 ## 파일 설명
@@ -47,3 +48,4 @@ rag-master/
 - `chapter01-langchain-overview/13-in-memory-chat-message-history.ipynb`: `InMemoryChatMessageHistory`를 사용한 대화 이력 저장과 전달
 - `chapter01-langchain-overview/14-runnable-message-history-and-langgraph-memory.ipynb`: `RunnableWithMessageHistory`와 LangGraph `InMemorySaver`를 사용한 자동 대화 이력 관리
 - `chapter01-langchain-overview/15-message-trimming-and-summarization.ipynb`: `trim_messages`와 요약 체인을 사용한 대화 이력 축약
+- `chapter01-langchain-overview/16-langgraph-memory-trimming-and-summary.ipynb`: LangGraph checkpoint 기반 대화 이력 관리, trimming, summarization
