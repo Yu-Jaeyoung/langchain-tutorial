@@ -8,24 +8,26 @@
 rag-master/
 ├── docker-compose.yml
 ├── README.md
-└── chapter01-langchain-overview/
-    ├── 00-gpu-cuda-check.ipynb
-    ├── 01-openai-compatible-local-llm-call.ipynb
-    ├── 02-langchain-prompt-model-parser-chain.ipynb
-    ├── 03-langchain-batch-and-stream.ipynb
-    ├── 04-langchain-sequential-composed-chain.ipynb
-    ├── 05-langchain-parallel-runnableparallel.ipynb
-    ├── 06-langchain-prompt-templates-and-placeholders.ipynb
-    ├── 07-few-shot-prompt-and-semantic-selector.ipynb
-    ├── 08-json-output-parser-and-retry.ipynb
-    ├── 09-pydantic-output-parser-and-validation.ipynb
-    ├── 10-simple-json-output-parser-streaming.ipynb
-    ├── 11-json-output-parser-pydantic-schema.ipynb
-    ├── 12-chat-prompt-conversation-history.ipynb
-    ├── 13-in-memory-chat-message-history.ipynb
-    ├── 14-runnable-message-history-and-langgraph-memory.ipynb
-    ├── 15-message-trimming-and-summarization.ipynb
-    └── 16-langgraph-memory-trimming-and-summary.ipynb
+├── chapter01-langchain-overview/
+│   ├── 00-gpu-cuda-check.ipynb
+│   ├── 01-openai-compatible-local-llm-call.ipynb
+│   ├── 02-langchain-prompt-model-parser-chain.ipynb
+│   ├── 03-langchain-batch-and-stream.ipynb
+│   ├── 04-langchain-sequential-composed-chain.ipynb
+│   ├── 05-langchain-parallel-runnableparallel.ipynb
+│   ├── 06-langchain-prompt-templates-and-placeholders.ipynb
+│   ├── 07-few-shot-prompt-and-semantic-selector.ipynb
+│   ├── 08-json-output-parser-and-retry.ipynb
+│   ├── 09-pydantic-output-parser-and-validation.ipynb
+│   ├── 10-simple-json-output-parser-streaming.ipynb
+│   ├── 11-json-output-parser-pydantic-schema.ipynb
+│   ├── 12-chat-prompt-conversation-history.ipynb
+│   ├── 13-in-memory-chat-message-history.ipynb
+│   ├── 14-runnable-message-history-and-langgraph-memory.ipynb
+│   ├── 15-message-trimming-and-summarization.ipynb
+│   └── 16-langgraph-memory-trimming-and-summary.ipynb
+└── chapter02-rag-basics-and-practice/
+    └── README.md
 ```
 
 ## 파일 설명
@@ -49,3 +51,4 @@ rag-master/
 - `chapter01-langchain-overview/14-runnable-message-history-and-langgraph-memory.ipynb`: `RunnableWithMessageHistory`와 LangGraph `InMemorySaver`를 사용한 자동 대화 이력 관리
 - `chapter01-langchain-overview/15-message-trimming-and-summarization.ipynb`: `trim_messages`와 요약 체인을 사용한 대화 이력 축약
 - `chapter01-langchain-overview/16-langgraph-memory-trimming-and-summary.ipynb`: LangGraph checkpoint 기반 대화 이력 관리, trimming, summarization
+- `chapter02-rag-basics-and-practice/`: chapter02 검색 증강 생성 기초와 실습
