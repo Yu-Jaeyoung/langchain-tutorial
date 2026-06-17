@@ -5,3 +5,4 @@
 ## 파일 설명
 
 - `01-cosine-similarity.ipynb`: NumPy로 벡터 간 코사인 유사도 계산
+- `02-langchain-embeddings-similarity-search.ipynb`: LangChain 임베딩과 코사인 유사도를 사용한 문서 검색
