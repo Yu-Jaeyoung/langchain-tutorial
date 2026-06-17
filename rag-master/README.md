@@ -29,7 +29,8 @@ rag-master/
 └── chapter02-rag-basics-and-practice/
     ├── README.md
     ├── 01-cosine-similarity.ipynb
-    └── 02-langchain-embeddings-similarity-search.ipynb
+    ├── 02-langchain-embeddings-similarity-search.ipynb
+    └── 03-web-document-loading.ipynb
 ```
 
 ## 파일 설명
@@ -56,3 +57,4 @@ rag-master/
 - `chapter02-rag-basics-and-practice/`: chapter02 검색 증강 생성 기초와 실습
 - `chapter02-rag-basics-and-practice/01-cosine-similarity.ipynb`: NumPy로 벡터 간 코사인 유사도 계산
 - `chapter02-rag-basics-and-practice/02-langchain-embeddings-similarity-search.ipynb`: LangChain 임베딩과 코사인 유사도를 사용한 문서 검색
+- `chapter02-rag-basics-and-practice/03-web-document-loading.ipynb`: `WebBaseLoader`와 `BeautifulSoup`를 사용한 웹 문서 로드
