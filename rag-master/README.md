@@ -27,7 +27,8 @@ rag-master/
 │   ├── 15-message-trimming-and-summarization.ipynb
 │   └── 16-langgraph-memory-trimming-and-summary.ipynb
 └── chapter02-rag-basics-and-practice/
-    └── README.md
+    ├── README.md
+    └── 01-cosine-similarity.ipynb
 ```
 
 ## 파일 설명
@@ -52,3 +53,4 @@ rag-master/
 - `chapter01-langchain-overview/15-message-trimming-and-summarization.ipynb`: `trim_messages`와 요약 체인을 사용한 대화 이력 축약
 - `chapter01-langchain-overview/16-langgraph-memory-trimming-and-summary.ipynb`: LangGraph checkpoint 기반 대화 이력 관리, trimming, summarization
 - `chapter02-rag-basics-and-practice/`: chapter02 검색 증강 생성 기초와 실습
+- `chapter02-rag-basics-and-practice/01-cosine-similarity.ipynb`: NumPy로 벡터 간 코사인 유사도 계산

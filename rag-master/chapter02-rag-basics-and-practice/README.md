@@ -4,4 +4,4 @@
 
 ## 파일 설명
 
-아직 정리된 실습 노트북이 없습니다.
+- `01-cosine-similarity.ipynb`: NumPy로 벡터 간 코사인 유사도 계산
