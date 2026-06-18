@@ -31,7 +31,8 @@ rag-master/
     ├── 01-cosine-similarity.ipynb
     ├── 02-langchain-embeddings-similarity-search.ipynb
     ├── 03-web-document-loading.ipynb
-    └── 04-pdf-document-loading-and-splitting.ipynb
+    ├── 04-pdf-document-loading-and-splitting.ipynb
+    └── 05-csv-document-loading.ipynb
 ```
 
 ## 파일 설명
@@ -60,3 +61,4 @@ rag-master/
 - `chapter02-rag-basics-and-practice/02-langchain-embeddings-similarity-search.ipynb`: LangChain 임베딩과 코사인 유사도를 사용한 문서 검색
 - `chapter02-rag-basics-and-practice/03-web-document-loading.ipynb`: `WebBaseLoader`와 `BeautifulSoup`를 사용한 웹 문서 로드
 - `chapter02-rag-basics-and-practice/04-pdf-document-loading-and-splitting.ipynb`: PDF 로더 비교와 텍스트 청크 분할
+- `chapter02-rag-basics-and-practice/05-csv-document-loading.ipynb`: `CSVLoader`와 pandas를 사용한 CSV 문서 로드
