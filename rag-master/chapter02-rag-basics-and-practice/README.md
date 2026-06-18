@@ -9,3 +9,4 @@
 - `03-web-document-loading.ipynb`: `WebBaseLoader`와 `BeautifulSoup`를 사용한 웹 문서 로드
 - `04-pdf-document-loading-and-splitting.ipynb`: PDF 로더 비교와 텍스트 청크 분할
 - `05-csv-document-loading.ipynb`: `CSVLoader`와 pandas를 사용한 CSV 문서 로드
+- `06-text-splitting-and-semantic-chunking.ipynb`: 문자 기반 텍스트 분할과 임베딩 기반 시맨틱 청킹
