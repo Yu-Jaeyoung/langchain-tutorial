@@ -2,3 +2,6 @@
 # Unsloth local runtime data
 unsloth/workspace/
 unsloth/hf_cache/
+
+# ChromaDB local runtime data
+chroma/data/

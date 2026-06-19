@@ -23,3 +23,12 @@ services:
     stdin_open: true
 
     gpus: all
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chromadb
+
+    restart: unless-stopped
+
+    volumes:
+      - ./chroma/data:/chroma/chroma
