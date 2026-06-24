@@ -34,7 +34,8 @@ rag-master/
     ├── 04-pdf-document-loading-and-splitting.ipynb
     ├── 05-csv-document-loading.ipynb
     ├── 06-text-splitting-and-semantic-chunking.ipynb
-    └── 07-chroma-vectorstore-retrieval.ipynb
+    ├── 07-chroma-vectorstore-retrieval.ipynb
+    └── 08-streamlit-rag-chatbot.ipynb
 ```
 
 ## 파일 설명
@@ -66,3 +67,4 @@ rag-master/
 - `chapter02-rag-basics-and-practice/05-csv-document-loading.ipynb`: `CSVLoader`와 pandas를 사용한 CSV 문서 로드
 - `chapter02-rag-basics-and-practice/06-text-splitting-and-semantic-chunking.ipynb`: 문자 기반 텍스트 분할과 임베딩 기반 시맨틱 청킹
 - `chapter02-rag-basics-and-practice/07-chroma-vectorstore-retrieval.ipynb`: ChromaDB 벡터스토어 적재와 인스트럭션 기반 유사도 검색
+- `chapter02-rag-basics-and-practice/08-streamlit-rag-chatbot.ipynb`: ChromaDB 기반 RAG 체인과 Streamlit 챗봇 UI 구성

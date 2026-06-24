@@ -11,3 +11,4 @@
 - `05-csv-document-loading.ipynb`: `CSVLoader`와 pandas를 사용한 CSV 문서 로드
 - `06-text-splitting-and-semantic-chunking.ipynb`: 문자 기반 텍스트 분할과 임베딩 기반 시맨틱 청킹
 - `07-chroma-vectorstore-retrieval.ipynb`: ChromaDB 벡터스토어 적재와 인스트럭션 기반 유사도 검색
+- `08-streamlit-rag-chatbot.ipynb`: ChromaDB 기반 RAG 체인과 Streamlit 챗봇 UI 구성
