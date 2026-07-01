@@ -26,16 +26,18 @@ rag-master/
 │   ├── 14-runnable-message-history-and-langgraph-memory.ipynb
 │   ├── 15-message-trimming-and-summarization.ipynb
 │   └── 16-langgraph-memory-trimming-and-summary.ipynb
-└── chapter02-rag-basics-and-practice/
-    ├── README.md
-    ├── 01-cosine-similarity.ipynb
-    ├── 02-langchain-embeddings-similarity-search.ipynb
-    ├── 03-web-document-loading.ipynb
-    ├── 04-pdf-document-loading-and-splitting.ipynb
-    ├── 05-csv-document-loading.ipynb
-    ├── 06-text-splitting-and-semantic-chunking.ipynb
-    ├── 07-chroma-vectorstore-retrieval.ipynb
-    └── 08-streamlit-rag-chatbot.ipynb
+├── chapter02-rag-basics-and-practice/
+│   ├── README.md
+│   ├── 01-cosine-similarity.ipynb
+│   ├── 02-langchain-embeddings-similarity-search.ipynb
+│   ├── 03-web-document-loading.ipynb
+│   ├── 04-pdf-document-loading-and-splitting.ipynb
+│   ├── 05-csv-document-loading.ipynb
+│   ├── 06-text-splitting-and-semantic-chunking.ipynb
+│   ├── 07-chroma-vectorstore-retrieval.ipynb
+│   └── 08-streamlit-rag-chatbot.ipynb
+└── chapter03-multimodal-rag-complex-data-processing/
+    └── README.md
 ```
 
 ## 파일 설명
@@ -68,3 +70,4 @@ rag-master/
 - `chapter02-rag-basics-and-practice/06-text-splitting-and-semantic-chunking.ipynb`: 문자 기반 텍스트 분할과 임베딩 기반 시맨틱 청킹
 - `chapter02-rag-basics-and-practice/07-chroma-vectorstore-retrieval.ipynb`: ChromaDB 벡터스토어 적재와 인스트럭션 기반 유사도 검색
 - `chapter02-rag-basics-and-practice/08-streamlit-rag-chatbot.ipynb`: ChromaDB 기반 RAG 체인과 Streamlit 챗봇 UI 구성
+- `chapter03-multimodal-rag-complex-data-processing/`: chapter03 멀티 모달 RAG를 활용한 복합 데이터 처리
