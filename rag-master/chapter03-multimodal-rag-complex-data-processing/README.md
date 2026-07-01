@@ -4,4 +4,4 @@
 
 ## 파일 설명
 
-아직 정리된 실습 노트북이 없습니다.
+- `01-multimodal-pdf-rag-pipeline.ipynb`: PDF 텍스트, 표, 이미지 요약 기반 멀티모달 RAG 파이프라인

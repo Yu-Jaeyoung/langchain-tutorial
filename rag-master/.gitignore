@@ -5,3 +5,6 @@ unsloth/hf_cache/
 
 # ChromaDB local runtime data
 chroma/data/
+
+# Chapter 3 generated extraction/cache files
+chapter03-multimodal-rag-complex-data-processing/practice3/
