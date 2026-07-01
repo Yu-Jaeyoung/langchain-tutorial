@@ -5,3 +5,4 @@
 ## 파일 설명
 
 - `01-multimodal-pdf-rag-pipeline.ipynb`: PDF 텍스트, 표, 이미지 요약 기반 멀티모달 RAG 파이프라인
+- `sample.pdf`: `01-multimodal-pdf-rag-pipeline.ipynb`에서 사용하는 PDF 입력 자료
