@@ -6,3 +6,4 @@
 
 - `01-parent-child-document-retrieval.ipynb`: Chroma에 부모·자식 문서를 영속화한 계층적 문서 검색
 - `02-multi-query-retrieval.ipynb`: LLM이 생성한 다중 질의로 검색 결과를 통합하는 MultiQuery 검색
+- `03-hyde-hypothetical-document-retrieval.ipynb`: 가상 답변 문서를 생성해 유사 문서를 찾는 HyDE 검색 파이프라인
