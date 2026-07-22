@@ -6,6 +6,9 @@
 
 ```text
 rag-master/
+├── .dockerignore
+├── .env.example
+├── Dockerfile.pgvector
 ├── docker-compose.yml
 ├── README.md
 ├── chapter01-langchain-overview/
@@ -44,12 +47,16 @@ rag-master/
     ├── README.md
     ├── 01-parent-child-document-retrieval.ipynb
     ├── 02-multi-query-retrieval.ipynb
-    └── 03-hyde-hypothetical-document-retrieval.ipynb
+    ├── 03-hyde-hypothetical-document-retrieval.ipynb
+    └── 04-postgresql-bm25-sparse-retrieval.ipynb
 ```
 
 ## 파일 설명
 
-- `docker-compose.yml`: Unsloth 기반 로컬 Jupyter/LLM 실행 환경 설정
+- `.dockerignore`: Docker 빌드 컨텍스트에서 로컬 데이터와 민감 설정 제외
+- `.env.example`: Docker Compose와 실습 노트북에서 사용하는 환경변수 템플릿
+- `Dockerfile.pgvector`: pgvector에 `mecab-ko`, `textsearch_ko` 한국어 전문검색 확장을 추가한 이미지
+- `docker-compose.yml`: Unsloth, ChromaDB, pgAdmin, pgvector 로컬 실행 환경 설정
 - `chapter01-langchain-overview/`: chapter01 랭체인 살펴보기
 - `chapter01-langchain-overview/00-gpu-cuda-check.ipynb`: NVIDIA GPU, CUDA, PyTorch 연산 확인
 - `chapter01-langchain-overview/01-openai-compatible-local-llm-call.ipynb`: OpenAI 호환 API로 로컬 LLM 직접 호출
@@ -84,3 +91,4 @@ rag-master/
 - `chapter04-advanced-rag-retrieval-response-optimization/01-parent-child-document-retrieval.ipynb`: Chroma에 부모·자식 문서를 영속화한 계층적 문서 검색
 - `chapter04-advanced-rag-retrieval-response-optimization/02-multi-query-retrieval.ipynb`: LLM이 생성한 다중 질의로 검색 결과를 통합하는 MultiQuery 검색
 - `chapter04-advanced-rag-retrieval-response-optimization/03-hyde-hypothetical-document-retrieval.ipynb`: 가상 답변 문서를 생성해 유사 문서를 찾는 HyDE 검색 파이프라인
+- `chapter04-advanced-rag-retrieval-response-optimization/04-postgresql-bm25-sparse-retrieval.ipynb`: PostgreSQL 한국어 전문검색과 증분 색인으로 구현한 BM25 희소 검색

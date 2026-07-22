@@ -1,0 +1,8 @@
+.git
+.env
+chroma/data/
+pgadmin/data/
+pgvector/data/
+unsloth/workspace/
+unsloth/hf_cache/
+chapter03-multimodal-rag-complex-data-processing/practice3/

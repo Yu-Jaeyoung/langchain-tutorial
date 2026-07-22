@@ -16,8 +16,15 @@ services:
 
     environment:
       TZ: Asia/Seoul
-      JUPYTER_PASSWORD: thisispassword
+      JUPYTER_PASSWORD: ${JUPYTER_PASSWORD:?set JUPYTER_PASSWORD in .env}
       CUDA_VISIBLE_DEVICES: "0,1"
+      LMSTUDIO_BASE_URL: ${LMSTUDIO_BASE_URL:?set LMSTUDIO_BASE_URL in .env}
+      LMSTUDIO_API_KEY: ${LMSTUDIO_API_KEY:-lm-studio}
+      PG_HOST: pgvector
+      PG_PORT: "5432"
+      PG_DB: ${POSTGRES_DB:-admin}
+      PG_USER: ${POSTGRES_USER:-admin}
+      PG_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
 
     ipc: host
     tty: true
@@ -33,3 +40,30 @@ services:
 
     volumes:
       - ./chroma/data:/chroma/chroma
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:?set PGADMIN_DEFAULT_EMAIL in .env}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:?set PGADMIN_DEFAULT_PASSWORD in .env}
+    volumes:
+      - ./pgadmin/data:/var/lib/pgadmin
+    ports:
+      - "8112:80"
+
+  pgvector:
+    build:
+      context: .
+      dockerfile: Dockerfile.pgvector
+    container_name: pgvector
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-admin}
+      POSTGRES_USER: ${POSTGRES_USER:-admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes:
+      - ./pgvector/data:/var/lib/postgresql/data
+    ports:
+      - "55432:5432"
