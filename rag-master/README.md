@@ -58,6 +58,7 @@ rag-master/
     ├── 02-graphrag-knowledge-graph-indexing.ipynb
     ├── 03-graphrag-global-local-search.ipynb
     ├── 04-neo4j-graphrag-knowledge-graph-import.ipynb
+    ├── 05-neo4j-local-global-graph-rag.ipynb
     └── How_to_invest_money.txt
 ```
 
@@ -110,4 +111,5 @@ rag-master/
 - `chapter05-graph-rag-with-knowledge-graphs/02-graphrag-knowledge-graph-indexing.ipynb`: GraphRAG 인덱싱 파이프라인으로 엔티티·관계·커뮤니티 리포트를 생성하고 산출물을 검증
 - `chapter05-graph-rag-with-knowledge-graphs/03-graphrag-global-local-search.ipynb`: GraphRAG 커뮤니티 리포트 기반 글로벌 검색과 엔티티 기반 로컬 검색의 질문 유형별 비교
 - `chapter05-graph-rag-with-knowledge-graphs/04-neo4j-graphrag-knowledge-graph-import.ipynb`: GraphRAG Parquet 산출물을 Neo4j 노드·관계·커뮤니티로 일괄 적재하고 결과를 검증
+- `chapter05-graph-rag-with-knowledge-graphs/05-neo4j-local-global-graph-rag.ipynb`: Neo4j 엔티티 벡터 인덱스를 사용한 로컬 검색과 커뮤니티 리포트 Map-Reduce 글로벌 검색
 - `chapter05-graph-rag-with-knowledge-graphs/How_to_invest_money.txt`: Chapter 5 GraphRAG 지식 그래프 구축용 Project Gutenberg 영문 원문
