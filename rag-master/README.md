@@ -41,7 +41,8 @@ rag-master/
 │   ├── 01-multimodal-pdf-rag-pipeline.ipynb
 │   └── sample.pdf
 └── chapter04-advanced-rag-retrieval-response-optimization/
-    └── README.md
+    ├── README.md
+    └── 01-parent-child-document-retrieval.ipynb
 ```
 
 ## 파일 설명
@@ -78,3 +79,4 @@ rag-master/
 - `chapter03-multimodal-rag-complex-data-processing/01-multimodal-pdf-rag-pipeline.ipynb`: PDF 텍스트, 표, 이미지 요약 기반 멀티모달 RAG 파이프라인
 - `chapter03-multimodal-rag-complex-data-processing/sample.pdf`: chapter03 멀티모달 PDF RAG 파이프라인 입력 자료
 - `chapter04-advanced-rag-retrieval-response-optimization/`: chapter04 검색과 응답을 최적화하는 RAG 고도화 전략
+- `chapter04-advanced-rag-retrieval-response-optimization/01-parent-child-document-retrieval.ipynb`: Chroma에 부모·자식 문서를 영속화한 계층적 문서 검색

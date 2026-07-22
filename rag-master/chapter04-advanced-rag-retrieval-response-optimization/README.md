@@ -4,4 +4,4 @@
 
 ## 파일 설명
 
-아직 정리된 실습 노트북이 없습니다.
+- `01-parent-child-document-retrieval.ipynb`: Chroma에 부모·자식 문서를 영속화한 계층적 문서 검색
