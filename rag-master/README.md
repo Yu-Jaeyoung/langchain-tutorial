@@ -42,7 +42,8 @@ rag-master/
 │   └── sample.pdf
 └── chapter04-advanced-rag-retrieval-response-optimization/
     ├── README.md
-    └── 01-parent-child-document-retrieval.ipynb
+    ├── 01-parent-child-document-retrieval.ipynb
+    └── 02-multi-query-retrieval.ipynb
 ```
 
 ## 파일 설명
@@ -80,3 +81,4 @@ rag-master/
 - `chapter03-multimodal-rag-complex-data-processing/sample.pdf`: chapter03 멀티모달 PDF RAG 파이프라인 입력 자료
 - `chapter04-advanced-rag-retrieval-response-optimization/`: chapter04 검색과 응답을 최적화하는 RAG 고도화 전략
 - `chapter04-advanced-rag-retrieval-response-optimization/01-parent-child-document-retrieval.ipynb`: Chroma에 부모·자식 문서를 영속화한 계층적 문서 검색
+- `chapter04-advanced-rag-retrieval-response-optimization/02-multi-query-retrieval.ipynb`: LLM이 생성한 다중 질의로 검색 결과를 통합하는 MultiQuery 검색
