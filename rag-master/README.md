@@ -57,6 +57,7 @@ rag-master/
     ├── 01-graphrag-lm-studio-setup.ipynb
     ├── 02-graphrag-knowledge-graph-indexing.ipynb
     ├── 03-graphrag-global-local-search.ipynb
+    ├── 04-neo4j-graphrag-knowledge-graph-import.ipynb
     └── How_to_invest_money.txt
 ```
 
@@ -65,7 +66,7 @@ rag-master/
 - `.dockerignore`: Docker 빌드 컨텍스트에서 로컬 데이터와 민감 설정 제외
 - `.env.example`: Docker Compose와 실습 노트북에서 사용하는 환경변수 템플릿
 - `Dockerfile.pgvector`: pgvector에 `mecab-ko`, `textsearch_ko` 한국어 전문검색 확장을 추가한 이미지
-- `docker-compose.yml`: Unsloth, ChromaDB, pgAdmin, pgvector 로컬 실행 환경 설정
+- `docker-compose.yml`: Unsloth, ChromaDB, pgAdmin, pgvector, Neo4j 로컬 실행 환경 설정
 - `chapter01-langchain-overview/`: chapter01 랭체인 살펴보기
 - `chapter01-langchain-overview/00-gpu-cuda-check.ipynb`: NVIDIA GPU, CUDA, PyTorch 연산 확인
 - `chapter01-langchain-overview/01-openai-compatible-local-llm-call.ipynb`: OpenAI 호환 API로 로컬 LLM 직접 호출
@@ -108,4 +109,5 @@ rag-master/
 - `chapter05-graph-rag-with-knowledge-graphs/01-graphrag-lm-studio-setup.ipynb`: LM Studio 완성·임베딩 모델을 GraphRAG와 연동하고 입력 문서를 준비하는 환경 설정
 - `chapter05-graph-rag-with-knowledge-graphs/02-graphrag-knowledge-graph-indexing.ipynb`: GraphRAG 인덱싱 파이프라인으로 엔티티·관계·커뮤니티 리포트를 생성하고 산출물을 검증
 - `chapter05-graph-rag-with-knowledge-graphs/03-graphrag-global-local-search.ipynb`: GraphRAG 커뮤니티 리포트 기반 글로벌 검색과 엔티티 기반 로컬 검색의 질문 유형별 비교
+- `chapter05-graph-rag-with-knowledge-graphs/04-neo4j-graphrag-knowledge-graph-import.ipynb`: GraphRAG Parquet 산출물을 Neo4j 노드·관계·커뮤니티로 일괄 적재하고 결과를 검증
 - `chapter05-graph-rag-with-knowledge-graphs/How_to_invest_money.txt`: Chapter 5 GraphRAG 지식 그래프 구축용 Project Gutenberg 영문 원문

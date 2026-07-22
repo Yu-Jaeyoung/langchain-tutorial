@@ -4,6 +4,7 @@
 chroma/data/
 pgadmin/data/
 pgvector/data/
+neo4j/
 unsloth/workspace/
 unsloth/hf_cache/
 chapter03-multimodal-rag-complex-data-processing/practice3/

@@ -14,5 +14,8 @@ chroma/data/
 pgadmin/data/
 pgvector/data/
 
+# Neo4j local runtime data, logs, imports, and plugins
+neo4j/
+
 # Chapter 3 generated extraction/cache files
 chapter03-multimodal-rag-complex-data-processing/practice3/

@@ -7,4 +7,5 @@
 - `01-graphrag-lm-studio-setup.ipynb`: LM Studio 완성·임베딩 모델을 GraphRAG와 연동하고 입력 문서를 준비하는 환경 설정
 - `02-graphrag-knowledge-graph-indexing.ipynb`: GraphRAG 인덱싱 파이프라인으로 엔티티·관계·커뮤니티 리포트를 생성하고 산출물을 검증
 - `03-graphrag-global-local-search.ipynb`: GraphRAG 커뮤니티 리포트 기반 글로벌 검색과 엔티티 기반 로컬 검색의 질문 유형별 비교
+- `04-neo4j-graphrag-knowledge-graph-import.ipynb`: GraphRAG Parquet 산출물을 Neo4j 노드·관계·커뮤니티로 일괄 적재하고 결과를 검증
 - `How_to_invest_money.txt`: GraphRAG 지식 그래프 구축에 사용하는 Project Gutenberg 영문 투자서 원문
