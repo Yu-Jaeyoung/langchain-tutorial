@@ -53,7 +53,9 @@ rag-master/
 │   ├── 06-bm25-pgvector-ensemble-retrieval.ipynb
 │   └── 07-qwen3-reranker-ensemble-retrieval.ipynb
 └── chapter05-graph-rag-with-knowledge-graphs/
-    └── README.md
+    ├── README.md
+    ├── 01-graphrag-lm-studio-setup.ipynb
+    └── How_to_invest_money.txt
 ```
 
 ## 파일 설명
@@ -101,3 +103,5 @@ rag-master/
 - `chapter04-advanced-rag-retrieval-response-optimization/06-bm25-pgvector-ensemble-retrieval.ipynb`: PostgreSQL BM25와 pgvector HNSW 검색 결과를 결합한 앙상블 검색
 - `chapter04-advanced-rag-retrieval-response-optimization/07-qwen3-reranker-ensemble-retrieval.ipynb`: BM25·pgvector 앙상블 후보를 Qwen3 리랭커로 재순위화하는 2단계 검색
 - `chapter05-graph-rag-with-knowledge-graphs/`: chapter05 지식 그래프를 활용한 그래프 RAG
+- `chapter05-graph-rag-with-knowledge-graphs/01-graphrag-lm-studio-setup.ipynb`: LM Studio 완성·임베딩 모델을 GraphRAG와 연동하고 입력 문서를 준비하는 환경 설정
+- `chapter05-graph-rag-with-knowledge-graphs/How_to_invest_money.txt`: Chapter 5 GraphRAG 지식 그래프 구축용 Project Gutenberg 영문 원문

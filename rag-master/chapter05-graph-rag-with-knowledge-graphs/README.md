@@ -4,4 +4,5 @@
 
 ## 파일 설명
 
-아직 정리된 실습 노트북이 없습니다.
+- `01-graphrag-lm-studio-setup.ipynb`: LM Studio 완성·임베딩 모델을 GraphRAG와 연동하고 입력 문서를 준비하는 환경 설정
+- `How_to_invest_money.txt`: GraphRAG 지식 그래프 구축에 사용하는 Project Gutenberg 영문 투자서 원문
