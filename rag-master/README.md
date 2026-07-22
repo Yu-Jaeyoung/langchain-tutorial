@@ -43,15 +43,17 @@ rag-master/
 │   ├── README.md
 │   ├── 01-multimodal-pdf-rag-pipeline.ipynb
 │   └── sample.pdf
-└── chapter04-advanced-rag-retrieval-response-optimization/
-    ├── README.md
-    ├── 01-parent-child-document-retrieval.ipynb
-    ├── 02-multi-query-retrieval.ipynb
-    ├── 03-hyde-hypothetical-document-retrieval.ipynb
-    ├── 04-postgresql-bm25-sparse-retrieval.ipynb
-    ├── 05-pgvector-hnsw-dense-retrieval.ipynb
-    ├── 06-bm25-pgvector-ensemble-retrieval.ipynb
-    └── 07-qwen3-reranker-ensemble-retrieval.ipynb
+├── chapter04-advanced-rag-retrieval-response-optimization/
+│   ├── README.md
+│   ├── 01-parent-child-document-retrieval.ipynb
+│   ├── 02-multi-query-retrieval.ipynb
+│   ├── 03-hyde-hypothetical-document-retrieval.ipynb
+│   ├── 04-postgresql-bm25-sparse-retrieval.ipynb
+│   ├── 05-pgvector-hnsw-dense-retrieval.ipynb
+│   ├── 06-bm25-pgvector-ensemble-retrieval.ipynb
+│   └── 07-qwen3-reranker-ensemble-retrieval.ipynb
+└── chapter05-graph-rag-with-knowledge-graphs/
+    └── README.md
 ```
 
 ## 파일 설명
@@ -98,3 +100,4 @@ rag-master/
 - `chapter04-advanced-rag-retrieval-response-optimization/05-pgvector-hnsw-dense-retrieval.ipynb`: MRL 임베딩 차원 축소와 pgvector HNSW 인덱스를 사용한 밀집 검색
 - `chapter04-advanced-rag-retrieval-response-optimization/06-bm25-pgvector-ensemble-retrieval.ipynb`: PostgreSQL BM25와 pgvector HNSW 검색 결과를 결합한 앙상블 검색
 - `chapter04-advanced-rag-retrieval-response-optimization/07-qwen3-reranker-ensemble-retrieval.ipynb`: BM25·pgvector 앙상블 후보를 Qwen3 리랭커로 재순위화하는 2단계 검색
+- `chapter05-graph-rag-with-knowledge-graphs/`: chapter05 지식 그래프를 활용한 그래프 RAG
