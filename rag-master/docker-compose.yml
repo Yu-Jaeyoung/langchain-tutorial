@@ -20,6 +20,7 @@ services:
       CUDA_VISIBLE_DEVICES: "0,1"
       LMSTUDIO_BASE_URL: ${LMSTUDIO_BASE_URL:?set LMSTUDIO_BASE_URL in .env}
       LMSTUDIO_API_KEY: ${LMSTUDIO_API_KEY:-lm-studio}
+      HF_TOKEN: ${HF_TOKEN:-}
       PG_HOST: pgvector
       PG_PORT: "5432"
       PG_DB: ${POSTGRES_DB:-admin}

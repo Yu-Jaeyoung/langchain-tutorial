@@ -8,6 +8,7 @@ chroma/data/
 
 # Local runtime secrets
 .env
+.hf_token
 
 # PostgreSQL and pgAdmin local runtime data
 pgadmin/data/

@@ -1,5 +1,6 @@
 .git
 .env
+.hf_token
 chroma/data/
 pgadmin/data/
 pgvector/data/

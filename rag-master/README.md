@@ -50,7 +50,8 @@ rag-master/
     ├── 03-hyde-hypothetical-document-retrieval.ipynb
     ├── 04-postgresql-bm25-sparse-retrieval.ipynb
     ├── 05-pgvector-hnsw-dense-retrieval.ipynb
-    └── 06-bm25-pgvector-ensemble-retrieval.ipynb
+    ├── 06-bm25-pgvector-ensemble-retrieval.ipynb
+    └── 07-qwen3-reranker-ensemble-retrieval.ipynb
 ```
 
 ## 파일 설명
@@ -96,3 +97,4 @@ rag-master/
 - `chapter04-advanced-rag-retrieval-response-optimization/04-postgresql-bm25-sparse-retrieval.ipynb`: PostgreSQL 한국어 전문검색과 증분 색인으로 구현한 BM25 희소 검색
 - `chapter04-advanced-rag-retrieval-response-optimization/05-pgvector-hnsw-dense-retrieval.ipynb`: MRL 임베딩 차원 축소와 pgvector HNSW 인덱스를 사용한 밀집 검색
 - `chapter04-advanced-rag-retrieval-response-optimization/06-bm25-pgvector-ensemble-retrieval.ipynb`: PostgreSQL BM25와 pgvector HNSW 검색 결과를 결합한 앙상블 검색
+- `chapter04-advanced-rag-retrieval-response-optimization/07-qwen3-reranker-ensemble-retrieval.ipynb`: BM25·pgvector 앙상블 후보를 Qwen3 리랭커로 재순위화하는 2단계 검색
