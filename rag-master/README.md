@@ -56,6 +56,7 @@ rag-master/
     ├── README.md
     ├── 01-graphrag-lm-studio-setup.ipynb
     ├── 02-graphrag-knowledge-graph-indexing.ipynb
+    ├── 03-graphrag-global-local-search.ipynb
     └── How_to_invest_money.txt
 ```
 
@@ -106,4 +107,5 @@ rag-master/
 - `chapter05-graph-rag-with-knowledge-graphs/`: chapter05 지식 그래프를 활용한 그래프 RAG
 - `chapter05-graph-rag-with-knowledge-graphs/01-graphrag-lm-studio-setup.ipynb`: LM Studio 완성·임베딩 모델을 GraphRAG와 연동하고 입력 문서를 준비하는 환경 설정
 - `chapter05-graph-rag-with-knowledge-graphs/02-graphrag-knowledge-graph-indexing.ipynb`: GraphRAG 인덱싱 파이프라인으로 엔티티·관계·커뮤니티 리포트를 생성하고 산출물을 검증
+- `chapter05-graph-rag-with-knowledge-graphs/03-graphrag-global-local-search.ipynb`: GraphRAG 커뮤니티 리포트 기반 글로벌 검색과 엔티티 기반 로컬 검색의 질문 유형별 비교
 - `chapter05-graph-rag-with-knowledge-graphs/How_to_invest_money.txt`: Chapter 5 GraphRAG 지식 그래프 구축용 Project Gutenberg 영문 원문
